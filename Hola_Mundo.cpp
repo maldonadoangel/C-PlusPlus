@@ -1,4 +1,7 @@
 #include <iostream>
+#include <stdio.h>
+#include<stdlib.h>
+#include <string.h>
 
 using namespace std;
 
@@ -8,15 +11,22 @@ int main(){
     //tambien nos duplica el espacio del numero aceptado, unsigned lo podemos utilizar en
     //todo tipo de variables enteras 
     unsigned short edad;
+    float salario;
     cout<<"Hola Mundo"<<endl;
     cout<<"Ingresa tu nombre"<<endl;
-    cin>>nombre;
-    cout<<"Bienvenido: " + nombre<<endl;
+    getline(cin, nombre); //getline se utiliza para guardar informacion de tipo string
     cout<<"Ingresa tu edad: ";
     cin>>edad;
-    cout<<"Tu edad es de: " + edad<<endl;
-    return 0;
+    cout<<"Ingresa tu salario: ";
+    cin>>salario;
+    system("cls");
+    cout<<"Bienvenido: " + nombre<<endl;
+    cout<<"Tu edad es de: "<<edad<<" años"<<endl;
+    salario = salario *12;
+    cout<<"Tu salario anual es: "<<salario<<endl;;
     system("pause");
+    return 0;
+    
 }
     
     
